@@ -72,7 +72,7 @@ OS9.prototype = Object.create(MacRelease.prototype);
 OS9.prototype.constructor = OS9;
 
 var OSX = function () {
-    MacRelease.call(this, "MAC OS X");
+    MacRelease.call(this, "Mac OS X");
 };
 OSX.prototype = Object.create(MacRelease.prototype);
 OSX.prototype.constructor = OSX;
@@ -126,7 +126,7 @@ Object.defineProperties(OSFactory, {
                 case OSFactory.WINDOWS:
                     return new WindowsFactory();
                 default:
-                    throw new Error("The factory you are looking for has not been found");
+                    throw new Error("The factory you are looking for has not been found.");
             }
         },
         enumerable: true
@@ -171,7 +171,7 @@ LinuxFactory.prototype.getLinuxDistro = function (id) {
         case LinuxFactory.REDHAT:
             return new RedHat();
         default:
-            throw new Error("The Linux distribution you are looking for has not been found");
+            throw new Error("The Linux distribution you are looking for has not been found.");
     }
 };
 
@@ -201,7 +201,7 @@ MacFactory.prototype.getMacRelease = function (id) {
         case MacFactory.OSX:
             return new OSX();
         default:
-            throw new Error("The Mac release you are looking for has not been found");
+            throw new Error("The Mac release you are looking for has not been found.");
     }
 };
 
@@ -231,9 +231,9 @@ WindowsFactory.prototype.getWindowsVersion = function (id) {
         case WindowsFactory.VISTA:
             return new Vista();
         default:
-            throw new Error("The Windows version you are looking for has not been found");
+            throw new Error("The Windows version you are looking for has not been found.");
     }
-}
+};
 
 // ==============================
 // CLIENT CODE 

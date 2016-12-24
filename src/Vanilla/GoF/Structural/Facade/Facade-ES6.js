@@ -41,7 +41,7 @@ class HowToFeedAnimals {
     }
 
     feedAnimals() {
-        return `${this._dog.eat()} ${this._rabbit.eat()}`;
+        return `${this._dog.eat()}${this._rabbit.eat()}`;
     }
 }
 
@@ -49,6 +49,6 @@ class HowToFeedAnimals {
 // CLIENT CODE
 // ==============================
 
-var facade = new HowToFeedAnimals();
+let facade = new HowToFeedAnimals();
 
 console.log(facade.feedAnimals());

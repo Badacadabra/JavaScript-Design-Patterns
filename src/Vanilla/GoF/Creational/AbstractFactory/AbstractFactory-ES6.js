@@ -184,7 +184,7 @@ class MacFactory extends OSFactory {
 
 class WindowsFactory extends OSFactory {
     static get XP() { return 0; }
-    static get Vista() { return 1; }
+    static get VISTA() { return 1; }
 
     getWindowsVersion(id) {
         switch (id) {

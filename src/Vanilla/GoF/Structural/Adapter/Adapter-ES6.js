@@ -54,6 +54,6 @@ class HDMIToVGAAdapter extends DigitalInterface {
 // CLIENT CODE
 // ==============================
 
-var adapter = new HDMIToVGAAdapter();
+let adapter = new HDMIToVGAAdapter();
 
 console.log(adapter.handleDigitalSignal()); // Your computer uses HDMI and your projector uses VGA
