@@ -1,43 +1,9 @@
-// ==============================
-// ORDER
-// ==============================
-
-const texMex = {
-    deliver() {
-        return this.customer.pay(); 
-    }
-};
+import texMex from './API/order';
+import restaurant from './API/restaurant';
+import customer from './API/customer';
 
 // ==============================
-// RESTAURANT
-// ==============================
-
-const restaurant = {
-    orders: [],
-    addOrder(order) {
-        this.orders.push(order); 
-    },
-    prepareOrders() {
-        let summary = "";
-        for (let order of this.orders) {
-            summary += order.deliver();
-        }
-        return summary;
-    }
-};
-
-// ==============================
-// CUSTOMER
-// ==============================
-
-const customer = {
-    pay() {
-        return "Payment OK!\n";
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 texMex.customer = customer;

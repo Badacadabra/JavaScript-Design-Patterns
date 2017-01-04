@@ -1,38 +1,7 @@
-// ==============================
-// STATES 
-// ==============================
-
-const off = {
-    name: "off",
-    power(pc) {
-        pc.currentState = pc.states.on;
-    }
-};
-
-const on = {
-    name: "on",
-    power(pc) {
-        pc.currentState = pc.states.off; 
-    }
-};
+import pc from './API/context';
 
 // ==============================
-// CONTEXT
-// ==============================
-
-const pc = {
-    currentState: null,
-    states: {
-        off: off,
-        on: on
-    },
-    power() {
-        this.currentState.power(this); 
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 pc.currentState = pc.states.off;

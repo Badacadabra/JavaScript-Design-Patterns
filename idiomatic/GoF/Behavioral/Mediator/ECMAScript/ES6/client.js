@@ -1,45 +1,8 @@
-// ==============================
-// COLLEAGUES (NEIGHBORS)
-// ==============================
-
-const neighbor = name => {
-    return {
-        name: name,
-        send(message, mediator) {
-            return mediator.send(message, this);
-        },
-        receive(message, sender) {
-            return `[${this.name}] Message from ${sender}: '${message}'\n`;
-        }
-    }
-};
-
-const tom = neighbor("Tom"),
-    dick = neighbor("Dick");
+import { tom, dick } from './API/colleagues';
+import harry from './API/mediator';
 
 // ==============================
-// MEDIATOR 
-// ==============================
-
-const harry = {
-    tom,
-    dick,
-    send(message, neighbor) {
-        if (neighbor.name === "Tom") {
-            return dick.receive(message, "Tom");
-        } else if (neighbor.name === "Dick") {
-            return tom.receive(message, "Dick");
-        } else {
-            throw {
-                type: "Not found",
-                message: "The given person has not been found in the neighborhood."
-            } 
-        }
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 let conversation = "";

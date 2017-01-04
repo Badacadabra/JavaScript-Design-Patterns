@@ -1,24 +1,10 @@
 'use strict'
 
-# ==============================
-# MONUMENTS 
-# ==============================
-
-monument = (name) ->
-    name: name
-    accept: (visitor) ->
-        visitor.visit @
+monument = require './API/monuments'
+tourist = require './API/visitor'
 
 # ==============================
-# VISITOR 
-# ==============================
-
-tourist =
-    visit: (monument) ->
-        "Visiting #{monument.name}"
-
-# ==============================
-# TEST 
+# CLIENT CODE 
 # ==============================
 
 castle = monument 'Castle'

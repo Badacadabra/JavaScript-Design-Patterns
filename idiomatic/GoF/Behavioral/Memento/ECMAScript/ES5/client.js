@@ -1,30 +1,10 @@
 'use strict';
 
-// ==============================
-// ORIGINATOR & MEMENTO 
-// ==============================
-
-var browser = {
-    saveCurrentPage: function () {
-        return {
-            webpage: this.currentPage
-        };
-    }
-};
+var browser = require('./API/browser'),
+    bookmarksManager = require('./API/bookmarks');
 
 // ==============================
-// CARETAKER 
-// ==============================
-
-var bookmarksManager = {
-    bookmarks: [],
-    addBookmark: function (bookmark) {
-        this.bookmarks.push(bookmark); 
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 browser.currentPage = "http://www.badacadabra.net";

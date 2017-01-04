@@ -1,31 +1,10 @@
 'use strict';
 
-// ==============================
-// BANK ACCOUNT
-// ==============================
-
-var bankAccount = {
-    withdrawMoney: function () {
-        return "Enjoy the cash!";
-    }
-};
+var atm = require('./API/finance');
 
 // ==============================
-// PROXY 
+// CLIENT CODE 
 // ==============================
-
-var atm = {
-    account: bankAccount,
-    withdrawMoney: function (code) {
-        if (code !== 1337) {
-            throw {
-                type: "AuthenticationException",
-                message: "Invalid code"
-            };
-        }
-        return atm.account.withdrawMoney();
-    }
-};
 
 try {
     console.log(atm.withdrawMoney(1234)); // Wrong code

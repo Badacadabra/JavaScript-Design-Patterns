@@ -1,43 +1,8 @@
-// ==============================
-// TEMPLATE METHOD
-// ==============================
-
-const build = construction => `Construction of a new home:
-1. ${construction.foundations()}
-2. ${construction.walls()}
-3. ${construction.roof()}
-`;
+import build from './API/template';
+import { house, building } from './API/homes';
 
 // ==============================
-// HOMES 
-// ==============================
-
-const house = {
-    foundations() {
-        return "House foundations";
-    },
-    walls() {
-        return "House walls";
-    },
-    roof() {
-        return "House roof";
-    }
-};
-
-const building = {
-    foundations() {
-        return "Apartment building foundations";
-    },
-    walls() {
-        return "Apartment building walls";
-    },
-    roof() {
-        return "Apartment building roof";
-    }
-};
-
-// ==============================
-// TEST
+// CLIENT CODE 
 // ==============================
 
 console.log(build(house));

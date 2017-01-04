@@ -1,25 +1,10 @@
 'use strict'
 
-# ==============================
-# BANK ACCOUNT
-# ==============================
-
-bankAccount =
-    withdrawMoney: -> 
-        "Enjoy the cash!"
+atm = require './API/finance'
 
 # ==============================
-# PROXY 
+# CLIENT CODE 
 # ==============================
-
-atm =
-    account: bankAccount
-    withdrawMoney: (code) -> 
-        if code isnt 1337
-            throw
-                type: "AuthenticationException"
-                message: "Invalid code"
-        atm.account.withdrawMoney()
 
 try
     console.log atm.withdrawMoney 1234  # Wrong code

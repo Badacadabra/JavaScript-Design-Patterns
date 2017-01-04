@@ -1,42 +1,8 @@
-// ==============================
-// ORIGINATOR & MEMENTO 
-// ==============================
-
-interface Bookmark {
-    webpage: string;
-}
-
-interface Browser {
-    currentPage?: string;
-    saveCurrentPage(): Bookmark; 
-}
-
-const browser: Browser = {
-    saveCurrentPage() {
-        return {
-            webpage: this.currentPage
-        } 
-    }
-};
+import { browser } from './API/browser';
+import { bookmarksManager } from './API/bookmarks';
 
 // ==============================
-// CARETAKER 
-// ==============================
-
-interface BookmarksManager {
-    bookmarks: Bookmark[];
-    addBookmark(bookmark: Bookmark): void;
-}
-
-const bookmarksManager: BookmarksManager = {
-    bookmarks: [],
-    addBookmark(bookmark) {
-        this.bookmarks.push(bookmark); 
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 browser.currentPage = "http://www.badacadabra.net";

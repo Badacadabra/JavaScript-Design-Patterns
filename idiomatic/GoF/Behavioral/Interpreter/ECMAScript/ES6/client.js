@@ -1,49 +1,8 @@
-// ==============================
-// CONTEXT
-// ==============================
-
-const sonata = {
-    name: "Moonlight Sonata",
-    composer: "Beethoven"
-};
+import sonata from './API/context';
+import { note, arpeggio } from './API/expressions';
 
 // ==============================
-// EXPRESSIONS
-// ==============================
-
-// Terminal expressions
-const note = name => {
-    return {
-        name,
-        interpret(sonata) {
-            return `${sonata.composer} played ${this.name}\n`;
-        }
-    }
-};
-
-// Nonterminal expressions
-const arpeggio = name => {
-    return {
-        name,
-        notes: [],
-        addNotes(notes) {
-            for (let note of notes) {
-                this.notes.push(note);
-            }
-        },
-        interpret(sonata) {
-            let res = "";
-            for (let note of this.notes) {
-                res += note.interpret(sonata); 
-            }
-            res += `This was a ${this.name} arpeggio from ${sonata.name}.\n`;
-            return res; 
-        }
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 // To avoid overcomplexity, we only take into account the first measure and the right hand (G-clef)

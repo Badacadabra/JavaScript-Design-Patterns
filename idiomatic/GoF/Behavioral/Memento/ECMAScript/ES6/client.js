@@ -1,28 +1,8 @@
-// ==============================
-// ORIGINATOR & MEMENTO 
-// ==============================
-
-const browser = {
-    saveCurrentPage() {
-        return {
-            webpage: this.currentPage
-        } 
-    }
-};
+import browser from './API/browser';
+import bookmarksManager from './API/bookmarks';
 
 // ==============================
-// CARETAKER 
-// ==============================
-
-const bookmarksManager = {
-    bookmarks: [],
-    addBookmark(bookmark) {
-        this.bookmarks.push(bookmark); 
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 browser.currentPage = "http://www.badacadabra.net";

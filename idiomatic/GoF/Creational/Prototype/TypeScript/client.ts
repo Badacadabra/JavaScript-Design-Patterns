@@ -1,24 +1,13 @@
+import { photocopy, PaperSheet } from './API/photocopy';
+
 // ==============================
-// PROTOTYPE
+// CLIENT CODE 
 // ==============================
 
-interface PaperSheet {
-    price: number;
-    currency: string;
-}
-
-const photocopy: (invoice: PaperSheet) => PaperSheet = function (invoice: PaperSheet): PaperSheet {
-    return Object.assign(Object.create(Object.getPrototypeOf(invoice)), invoice);
-};
-
-const invoice: PaperSheet = {
+let invoice: PaperSheet = {
     price: 42,
     currency: "€"
 };
-
-// ==============================
-// TEST 
-// ==============================
 
 let copy = photocopy(invoice); 
 

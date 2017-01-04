@@ -1,41 +1,8 @@
-// ==============================
-// CONTEXT 
-// ==============================
-
-interface Game {
-    strategy: Strategy; 
-    play(): string;
-}
-
-const fightingGame: Game = {
-    strategy: null,
-    play() {
-        return this.strategy.fight(); 
-    }
-};
+import { fightingGame } from './API/context';
+import { offense, defense } from './API/strategies';
 
 // ==============================
-// STRATEGIES 
-// ==============================
-
-interface Strategy {
-    fight(): string;
-}
-
-const offense: Strategy = {
-    fight() {
-        return "Fight with an offensive style";
-    }
-};
-
-const defense: Strategy = {
-    fight() {
-        return "Fight with a defensive style";
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 fightingGame.strategy = defense;

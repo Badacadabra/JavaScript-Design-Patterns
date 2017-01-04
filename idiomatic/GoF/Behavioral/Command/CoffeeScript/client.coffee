@@ -1,36 +1,11 @@
 'use strict'
 
-# ==============================
-# ORDER
-# ==============================
-
-texMex =
-    deliver: -> 
-        @customer.pay()
+texMex = require './API/order';
+restaurant = require './API/restaurant';
+customer = require './API/customer';
 
 # ==============================
-# RESTAURANT
-# ==============================
-
-restaurant =
-    orders: []
-    addOrder: (order) ->
-        @orders.push order
-    prepareOrders: -> 
-        summary = ""
-        summary += order.deliver() for order in @orders
-        summary
-
-# ==============================
-# CUSTOMER
-# ==============================
-
-customer =
-    pay: ->
-        "Payment OK!\n"
-
-# ==============================
-# TEST 
+# CLIENT CODE 
 # ==============================
 
 texMex.customer = customer

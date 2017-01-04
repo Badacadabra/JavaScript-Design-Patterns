@@ -1,37 +1,8 @@
-// ==============================
-// MONUMENTS 
-// ==============================
-
-interface Monument {
-    name: string;
-    accept(visitor: Visitor): string;
-}
-
-const monument: (name: string) => Monument = function (name: string): Monument {
-    return {
-        name: name,
-        accept(visitor) {
-            return visitor.visit(this);
-        }
-    }
-};
+import { monument } from './API/monuments';
+import { tourist } from './API/visitor';
 
 // ==============================
-// VISITOR 
-// ==============================
-
-interface Visitor {
-    visit(monument: Monument): string;
-}
-
-const tourist: Visitor = {
-    visit(monument) {
-        return `Visiting ${monument.name}`;
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE
 // ==============================
 
 let castle = monument('Castle'),

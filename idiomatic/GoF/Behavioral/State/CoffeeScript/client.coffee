@@ -1,35 +1,9 @@
 'use strict'
 
-# ==============================
-# STATES 
-# ==============================
-
-# "off" and "on" are reserved keywords in CoffeeScript
-
-OFF =
-    name: "off"
-    power: (pc) ->
-        pc.currentState = pc.states.ON
-
-ON =
-    name: "on"
-    power: (pc) -> 
-        pc.currentState = pc.states.OFF
+pc = require './API/context'
 
 # ==============================
-# CONTEXT
-# ==============================
-
-pc =
-    currentState: null
-    states:
-        OFF: OFF
-        ON: ON
-    power: -> 
-        @currentState.power(@)
-
-# ==============================
-# TEST 
+# CLIENT CODE 
 # ==============================
 
 pc.currentState = pc.states.OFF

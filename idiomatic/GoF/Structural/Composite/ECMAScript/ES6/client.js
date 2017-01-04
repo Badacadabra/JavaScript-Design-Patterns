@@ -1,45 +1,7 @@
-// ==============================
-// SIMPLE COMPONENT
-// ==============================
-
-// A ball does not contain anything
-const createBall = () => { 
-    return {
-        description() {
-            return "There's a ball!\n";
-        }
-    }
-};
+import { createBall, createToyBox } from './API/toys';
 
 // ==============================
-// COMPOSITE COMPONENT
-// ==============================
-
-// A toy box is a toy entity which contains toys, including smaller toy boxes
-const createToyBox = () => {
-    return {
-        toys: [],
-        description() {
-            return "There's a toy box!\n";
-        },
-        add(toy) {
-            this.toys.push(toy); 
-        },
-        inventory() {
-            let inventory = "Let's open the toy box...\n";
-            for (let toy of this.toys) {
-                inventory += toy.description();
-                if (toy.hasOwnProperty("toys")) {
-                    inventory += toy.inventory();
-                }
-            }
-            return inventory;
-        }
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 // Here we organize our toys in an optimal way

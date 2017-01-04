@@ -1,42 +1,17 @@
 'use strict'
 
-# ==============================
-# SIMPLE COMPONENT
-# ==============================
-
-# A ball does not contain anything
-createBall = ->
-    description: -> 
-        "There's a ball!\n"
+toys = require './API/toys'
 
 # ==============================
-# COMPOSITE COMPONENT
-# ==============================
-
-# A toy box is a toy entity which contains toys, including smaller toy boxes
-createToyBox = -> 
-    toys: []
-    description: -> 
-        "There's a toy box!\n"
-    add: (toy) ->
-        @toys.push toy
-    inventory: -> 
-        inventory = "Let's open the toy box...\n"
-        for toy in @toys
-            inventory += toy.description()
-            inventory += toy.inventory() if toy.hasOwnProperty "toys"
-        inventory
-
-# ==============================
-# TEST 
+# CLIENT CODE 
 # ==============================
 
 # Here we organize our toys in an optimal way
-ball1 = createBall()
-ball2 = createBall()
-ball3 = createBall()
-bigToyBox = createToyBox()
-smallToyBox = createToyBox()
+ball1 = toys.ball()
+ball2 = toys.ball()
+ball3 = toys.ball()
+bigToyBox = toys.box()
+smallToyBox = toys.box()
 
 smallToyBox.add ball1
 bigToyBox.add ball2

@@ -1,42 +1,12 @@
 'use strict';
 
-var go = function (nextRelay) {
-    var res = "";
-    if (nextRelay === undefined) {
-        res += "";
-    } else {
-        res += nextRelay.go();
-    }
-    return res;
-};
+var race = require('./API/race');
 
 // ==============================
-// RACERS
+// CLIENT CODE 
 // ==============================
 
-var walker = {
-    go: function () {
-        return "Walker: go!\n" + go(this.nextRelay);
-    }
-};
+race.walker.nextRelay = race.runner;
+race.runner.nextRelay = race.swimmer;
 
-var runner = {
-    go: function () {
-        return "Runner: go!\n" + go(this.nextRelay);
-    }
-};
-
-var swimmer = {
-    go: function () {
-        return "Swimmer: go!\n" + go(this.nextRelay);
-    }
-};
-
-// ==============================
-// TEST 
-// ==============================
-
-walker.nextRelay = runner;
-runner.nextRelay = swimmer;
-
-console.log(walker.go());
+console.log(race.walker.go());

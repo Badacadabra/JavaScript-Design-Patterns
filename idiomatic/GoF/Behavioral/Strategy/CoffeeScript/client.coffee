@@ -1,31 +1,13 @@
 'use strict'
 
-# ==============================
-# CONTEXT 
-# ==============================
-
-fightingGame =
-    strategy: null
-    play: -> 
-        @strategy.fight()
+fightingGame = require './API/context'
+strategies = require './API/strategies'
 
 # ==============================
-# STRATEGIES 
+# CLIENT CODE 
 # ==============================
 
-offense =
-    fight: -> 
-        "Fight with an offensive style"
-
-defense =
-    fight: -> 
-        "Fight with a defensive style"
-
-# ==============================
-# TEST 
-# ==============================
-
-fightingGame.strategy = defense
+fightingGame.strategy = strategies.defense
 console.log "ROUND 1 - #{fightingGame.play()}"
-fightingGame.strategy = offense
+fightingGame.strategy = strategies.offense
 console.log "ROUND 2 - #{fightingGame.play()}"

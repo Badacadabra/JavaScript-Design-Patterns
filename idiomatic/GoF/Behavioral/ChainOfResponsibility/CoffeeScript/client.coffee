@@ -1,40 +1,12 @@
 'use strict'
 
-go = (nextRelay) ->
-    res = ""
-    if nextRelay? then res += nextRelay.go() else res += ""
-    res
+race = require './API/race'
 
 # ==============================
-# RACERS
+# CLIENT CODE 
 # ==============================
 
-walker =
-    go: -> 
-        """
-        Walker: go!
-        #{go(@nextRelay)}
-        """
+race.walker.nextRelay = race.runner
+race.runner.nextRelay = race.swimmer
 
-runner =
-    go: -> 
-        """
-        Runner: go!
-        #{go(@nextRelay)}
-        """
-
-swimmer = 
-    go: ->
-        """
-        Swimmer: go!
-        #{go(@nextRelay)}
-        """
-
-# ==============================
-# TEST 
-# ==============================
-
-walker.nextRelay = runner
-runner.nextRelay = swimmer
-
-console.log walker.go()
+console.log race.walker.go()

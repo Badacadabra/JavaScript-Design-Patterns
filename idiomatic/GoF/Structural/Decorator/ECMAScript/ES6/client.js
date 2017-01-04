@@ -1,35 +1,7 @@
-// ==============================
-// PIZZA
-// ==============================
-
-const margherita = {
-    ingredients() {
-        return "- Tomatoes\n- Mozzarella\n";
-    }
-};
+import { margherita, addBacon, addPeppers } from './API/pizza';
 
 // ==============================
-// DECORATORS (INGREDIENTS)
-// ==============================
-
-const addBacon = (pizza) => {
-    return {
-        ingredients() {
-            return `${pizza.ingredients()}- Bacon\n`;
-        }
-    }
-};
-
-const addPeppers = (pizza) => {
-    return {
-        ingredients() {
-            return `${pizza.ingredients()}- Peppers\n`;
-        }
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 console.log(addPeppers(addBacon(margherita)).ingredients());

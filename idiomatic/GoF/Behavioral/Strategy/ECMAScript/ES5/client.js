@@ -1,37 +1,13 @@
 'use strict';
 
-// ==============================
-// CONTEXT 
-// ==============================
-
-var fightingGame = {
-    strategy: null,
-    play: function () {
-        return this.strategy.fight(); 
-    }
-};
+var fightingGame = require('./API/context'),
+    strategies = require('./API/strategies');
 
 // ==============================
-// STRATEGIES 
+// CLIENT CODE 
 // ==============================
 
-var offense = {
-    fight: function () {
-        return "Fight with an offensive style";
-    }
-};
-
-var defense = {
-    fight: function () {
-        return "Fight with a defensive style";
-    }
-};
-
-// ==============================
-// TEST 
-// ==============================
-
-fightingGame.strategy = defense;
+fightingGame.strategy = strategies.defense;
 console.log("ROUND 1 - " + fightingGame.play());
-fightingGame.strategy = offense;
+fightingGame.strategy = strategies.offense;
 console.log("ROUND 2 - " + fightingGame.play());

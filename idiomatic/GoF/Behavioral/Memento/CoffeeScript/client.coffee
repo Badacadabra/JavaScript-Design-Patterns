@@ -1,24 +1,10 @@
 'use strict'
 
-# ==============================
-# ORIGINATOR & MEMENTO 
-# ==============================
-
-browser =
-    saveCurrentPage: -> 
-        webpage: @currentPage
+browser = require './API/browser'
+bookmarksManager = require './API/bookmarks'
 
 # ==============================
-# CARETAKER 
-# ==============================
-
-bookmarksManager =
-    bookmarks: []
-    addBookmark: (bookmark) ->
-        @bookmarks.push bookmark
-
-# ==============================
-# TEST 
+# CLIENT CODE 
 # ==============================
 
 browser.currentPage = "http://www.badacadabra.net"

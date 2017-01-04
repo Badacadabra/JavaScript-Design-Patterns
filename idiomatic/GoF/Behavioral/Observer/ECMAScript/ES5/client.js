@@ -1,44 +1,13 @@
 'use strict';
 
-// ==============================
-// OBSERVERS 
-// ==============================
-
-var lion = {
-    attack: function () {
-        return "Lion attack!\n"; 
-    }
-};
-
-var crocodile = {
-    attack: function () {
-        return "Crocodile attack!\n"; 
-    }
-};
+var predators = require('./API/observers'),
+    gazelle = require('./API/observable');
 
 // ==============================
-// OBSERVABLE
+// CLIENT CODE 
 // ==============================
 
-var gazelle = {
-    predators: [],
-    addPredator: function (predator) {
-        this.predators.push(predator); 
-    },
-    notifyPredators: function () {
-        var situation = "";
-        for (var i = 0, len = this.predators.length; i < len; i++) {
-            situation += this.predators[i].attack(); 
-        }
-        return situation;
-    }
-};
-
-// ==============================
-// TEST 
-// ==============================
-
-gazelle.addPredator(lion);
-gazelle.addPredator(crocodile);
+gazelle.addPredator(predators.lion);
+gazelle.addPredator(predators.crocodile);
 
 console.log(gazelle.notifyPredators());

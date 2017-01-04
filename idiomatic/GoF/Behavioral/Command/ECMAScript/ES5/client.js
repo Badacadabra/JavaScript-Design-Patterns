@@ -1,45 +1,11 @@
 'use strict';
 
-// ==============================
-// ORDER
-// ==============================
-
-var texMex = {
-    deliver: function () {
-        return this.customer.pay(); 
-    }
-};
+var texMex = require('./API/order'),
+    restaurant = require('./API/restaurant'),
+    customer = require('./API/customer');
 
 // ==============================
-// RESTAURANT
-// ==============================
-
-var restaurant = {
-    orders: [],
-    addOrder: function (order) {
-        this.orders.push(order); 
-    },
-    prepareOrders: function () {
-        var summary = "";
-        for (var i = 0, len = this.orders.length; i < len; i++) {
-            summary += this.orders[i].deliver();
-        }
-        return summary;
-    }
-};
-
-// ==============================
-// CUSTOMER
-// ==============================
-
-var customer = {
-    pay: function () {
-        return "Payment OK!\n";
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 texMex.customer = customer;

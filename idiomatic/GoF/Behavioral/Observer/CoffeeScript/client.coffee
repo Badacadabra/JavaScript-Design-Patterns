@@ -1,35 +1,13 @@
 'use strict'
 
-# ==============================
-# OBSERVERS 
-# ==============================
-
-lion =
-    attack: -> 
-        "Lion attack!\n"
-
-crocodile =
-    attack: ->
-        "Crocodile attack!\n"
+predators = require './API/observers'
+gazelle = require './API/observable'
 
 # ==============================
-# OBSERVABLE
+# CLIENT CODE 
 # ==============================
 
-gazelle =
-    predators: []
-    addPredator: (predator) ->
-        @predators.push predator
-    notifyPredators: -> 
-        situation = ""
-        situation += predator.attack() for predator in @predators 
-        situation
-
-# ==============================
-# TEST 
-# ==============================
-
-gazelle.addPredator lion
-gazelle.addPredator crocodile
+gazelle.addPredator predators.lion
+gazelle.addPredator predators.crocodile
 
 console.log gazelle.notifyPredators()

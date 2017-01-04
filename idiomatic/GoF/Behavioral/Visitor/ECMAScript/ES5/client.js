@@ -1,30 +1,10 @@
 'use strict';
 
-// ==============================
-// MONUMENTS 
-// ==============================
-
-var monument = function (name) {
-    return {
-        name: name,
-        accept: function (visitor) {
-            return visitor.visit(this);
-        }
-    }
-};
+var monument = require('./API/monuments'),
+    tourist = require('./API/visitor');
 
 // ==============================
-// VISITOR 
-// ==============================
-
-var tourist = {
-    visit: function (monument) {
-        return "Visiting " + monument.name;
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 var castle = monument('Castle'),

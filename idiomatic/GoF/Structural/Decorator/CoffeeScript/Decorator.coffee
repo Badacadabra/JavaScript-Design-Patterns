@@ -1,27 +1,9 @@
 'use strict'
 
-# ==============================
-# PIZZA
-# ==============================
-
-margherita =
-    ingredients: -> 
-        "- Tomatoes\n- Mozzarella\n"
+pizza = require './API/pizza'
 
 # ==============================
-# DECORATORS (INGREDIENTS)
+# CLIENT CODE 
 # ==============================
 
-addBacon = (pizza) -> 
-    ingredients: -> 
-        "#{pizza.ingredients()}- Bacon\n"
-
-addPeppers = (pizza) ->
-    ingredients: -> 
-        "#{pizza.ingredients()}- Peppers\n"
-
-# ==============================
-# TEST 
-# ==============================
-
-console.log addPeppers(addBacon(margherita)).ingredients()
+console.log pizza.peppers(pizza.bacon(pizza.margherita)).ingredients()

@@ -1,49 +1,8 @@
-// ==============================
-// OBSERVERS 
-// ==============================
-
-interface Predator {
-    attack(): string;
-}
-
-const lion: Predator = {
-    attack() {
-        return "Lion attack!\n"; 
-    }
-};
-
-const crocodile: Predator = {
-    attack() {
-        return "Crocodile attack!\n"; 
-    }
-};
+import { lion, crocodile } from './API/observers';
+import { gazelle } from './API/observable';
 
 // ==============================
-// OBSERVABLE
-// ==============================
-
-interface Prey {
-    predators: Predator[];
-    addPredator(predator: Predator): void;
-    notifyPredators(): string;
-}
-
-const gazelle: Prey = {
-    predators: [],
-    addPredator(predator) {
-        this.predators.push(predator); 
-    },
-    notifyPredators() {
-        let situation = "";
-        for (let predator of this.predators) {
-            situation += predator.attack(); 
-        }
-        return situation;
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 gazelle.addPredator(lion);

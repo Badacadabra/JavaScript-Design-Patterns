@@ -1,40 +1,9 @@
 'use strict';
 
-// ==============================
-// STATES 
-// ==============================
-
-var off = {
-    name: "off",
-    power: function (pc) {
-        pc.currentState = pc.states.on;
-    }
-};
-
-var on = {
-    name: "on",
-    power: function (pc) {
-        pc.currentState = pc.states.off; 
-    }
-};
+var pc = require('./API/context');
 
 // ==============================
-// CONTEXT
-// ==============================
-
-var pc = {
-    currentState: null,
-    states: {
-        off: off,
-        on: on
-    },
-    power: function () {
-        this.currentState.power(this); 
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 pc.currentState = pc.states.off;

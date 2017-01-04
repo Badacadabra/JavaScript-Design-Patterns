@@ -1,62 +1,21 @@
 'use strict';
 
-// ==============================
-// CONTEXT
-// ==============================
-
-var sonata = {
-    name: "Moonlight Sonata",
-    composer: "Beethoven"
-};
+var sonata = require('./API/context'),
+    musicNotation = require('./API/expressions');
 
 // ==============================
-// EXPRESSIONS
-// ==============================
-
-// Terminal expressions
-var note = function (name) {
-    return {
-        name: name,
-        interpret: function (sonata) {
-            return sonata.composer + " played " + this.name + "\n";
-        }
-    }
-};
-
-// Nonterminal expression
-var arpeggio = function (name) {
-    return {
-        name: name,
-        notes: [],
-        addNotes: function (notes) {
-            for (var i = 0, len = notes.length; i < len; i++) {
-                this.notes.push(notes[i]);
-            }
-        },
-        interpret: function (sonata) {
-            var res = "";
-            for (var i = 0, len = this.notes.length; i < len; i++) {
-                res += this.notes[i].interpret(sonata); 
-            }
-            res += "This was a " + this.name + " arpeggio from " + sonata.name + ".\n";
-            return res; 
-        }
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 // To avoid overcomplexity, we only take into account the first measure and the right hand (G-clef)
 
 // Notes
-var gSharp = note("G#"),
-    cSharp = note("C#"),
-    e = note("E");
+var gSharp = musicNotation.note("G#"),
+    cSharp = musicNotation.note("C#"),
+    e = musicNotation.note("E");
 
 // Arpeggio
-var cSharpMinor = arpeggio("C#m");
+var cSharpMinor = musicNotation.arpeggio("C#m");
 cSharpMinor.addNotes([gSharp, cSharp, e]);
 
 // Melody

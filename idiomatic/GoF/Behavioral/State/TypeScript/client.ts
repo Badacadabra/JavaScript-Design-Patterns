@@ -1,49 +1,7 @@
-// ==============================
-// STATES 
-// ==============================
-
-interface ComputerState {
-    name: string;
-    power(pc: Computer): void;
-}
-
-const off: ComputerState = {
-    name: "off",
-    power(pc) {
-        pc.currentState = pc.states.on;
-    }
-};
-
-const on: ComputerState = {
-    name: "on",
-    power(pc) {
-        pc.currentState = pc.states.off; 
-    }
-};
+import { pc } from './API/context';
 
 // ==============================
-// CONTEXT
-// ==============================
-
-interface Computer {
-    currentState: ComputerState;
-    states: {off: ComputerState, on: ComputerState};
-    power(): void;
-}
-
-const pc: Computer = {
-    currentState: null,
-    states: {
-        off: off,
-        on: on
-    },
-    power() {
-        this.currentState.power(this); 
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 pc.currentState = pc.states.off;

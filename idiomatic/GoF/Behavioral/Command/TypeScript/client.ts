@@ -1,58 +1,9 @@
-// ==============================
-// CUSTOMER
-// ==============================
-
-interface Customer {
-    pay(): string;
-}
-
-const customer: Customer = {
-    pay() {
-        return "Payment OK!\n";
-    }
-};
+import { texMex } from './API/order';
+import { restaurant } from './API/restaurant';
+import { customer } from './API/customer';
 
 // ==============================
-// ORDER
-// ==============================
-
-interface Order {
-    customer?: Customer;
-    deliver(): string;
-}
-
-const texMex: Order = {
-    deliver() {
-        return this.customer.pay(); 
-    }
-};
-
-// ==============================
-// RESTAURANT
-// ==============================
-
-interface Restaurant {
-    orders: Order[];
-    addOrder(order: Order): void;
-    prepareOrders(): string;
-}
-
-const restaurant: Restaurant = {
-    orders: [],
-    addOrder(order) {
-        this.orders.push(order); 
-    },
-    prepareOrders() {
-        let summary = "";
-        for (let order of this.orders) {
-            summary += order.deliver();
-        }
-        return summary;
-    }
-};
-
-// ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 texMex.customer = customer;

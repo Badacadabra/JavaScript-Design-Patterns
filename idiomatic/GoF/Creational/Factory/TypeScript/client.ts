@@ -1,52 +1,7 @@
-// ==============================
-// FACTORY OF GNU/LINUX DISTROS
-// ==============================
-
-interface LinuxDistro {
-    name: string;
-    boot(): string;
-}
-
-interface LinuxFactory {
-    getLinuxDistro(name: string): LinuxDistro | never;
-}
-
-const linuxFactory: LinuxFactory = {
-    getLinuxDistro(name) {
-        name = name.toLowerCase();
-        switch (name) {
-            case "debian":
-                return {
-                    name: name.charAt(0).toUpperCase(),
-                    boot() {
-                        return "Debian is booting...";
-                    }
-                }
-            case "redhat":
-                return {
-                    name: name.charAt(0).toUpperCase(),
-                    boot() {
-                        return "RedHat is booting...";
-                    }
-                }
-            case "slackware":
-                return {
-                    name: name.charAt(0).toUpperCase(),
-                    boot() {
-                        return "Slackware is booting...";
-                    }
-                }
-            default:
-                throw {
-                    type: "Not found",
-                    message: "The Linux distribution you are looking for has not been found"
-                }
-        }
-    }
-};
+import { linuxFactory, LinuxDistro } from './API/factory';
 
 // ==============================
-// TEST 
+// CLIENT CODE 
 // ==============================
 
 // Creation of our objects through the factory

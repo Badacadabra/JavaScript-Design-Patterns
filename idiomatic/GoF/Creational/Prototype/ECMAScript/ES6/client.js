@@ -1,17 +1,13 @@
+import photocopy from './API/photocopy';
+
 // ==============================
-// PROTOTYPE
+// CLIENT CODE 
 // ==============================
 
-const photocopy = invoice => Object.assign(Object.create(Object.getPrototypeOf(invoice)), invoice);
-
-const invoice = {
+let invoice = {
     price: 42,
     currency: "€"
 };
-
-// ==============================
-// TEST 
-// ==============================
 
 let copy = photocopy(invoice); 
 

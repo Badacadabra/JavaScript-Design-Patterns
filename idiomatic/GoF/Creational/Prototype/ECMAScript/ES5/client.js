@@ -1,29 +1,15 @@
 'use strict';
 
-// ==============================
-// PROTOTYPE
-// ==============================
+var photocopy = require('./API/photocopy');
 
-var photocopy = function (invoice) {
-    // Here we suppose invoice properties are always enumerable, writable and configurable.
-    // If not, we should use Object.defineProperty() along with Object.getOwnPropertyDescriptor().
-    var clone = Object.create(Object.getPrototypeOf(invoice));
-    for (var prop in invoice) {
-        if (invoice.hasOwnProperty(prop)) {
-            clone[prop] = invoice[prop];
-        }
-    }
-    return clone;
-};
+// ==============================
+// CLIENT CODE 
+// ==============================
 
 var invoice = {
     price: 42,
     currency: "€"
 };
-
-// ==============================
-// TEST 
-// ==============================
 
 var copy = photocopy(invoice);
 
