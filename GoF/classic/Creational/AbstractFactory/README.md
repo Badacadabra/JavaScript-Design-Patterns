@@ -17,3 +17,5 @@ AbstractFactory is a great solution here. We could consider it as a superset of 
   * Concrete implementations of these abstractions (e.g. Debian, Mac OS X, Windows XP)
   * A concrete factory for each OS family
   * An abstract factory delivering instances of the concrete factories
+
+![Abstract Factory (classic)](AbstractFactory.png)

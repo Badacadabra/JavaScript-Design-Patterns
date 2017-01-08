@@ -15,3 +15,5 @@ The Strategy design pattern is exactly what we need in this kind of situation. T
   * Object literals to represent available strategies (offense and defense)
 
 Offensive and defensive strategies seem to share a "fight" method, but the performed action is obviously different. Moreover, the context (fighting game) must have a reference to the current strategy because its main method ("play") is directly influenced by the selected strategy in the client code.
+
+![Strategy (idiomatic)](Strategy.png)

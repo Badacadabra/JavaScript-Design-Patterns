@@ -11,7 +11,7 @@ In computer science terms, it seems obvious that the restaurant has to handle a 
 # Solution
 
 The Command pattern is a great help here. In this pattern terminology, we will say that:
-  ***
+ 
   * The restaurant is the "invoker" who creates and handles new orders internally.
   * The order is the "command", in other words the request which comes from a client.
   * The customer is the "receiver" of the order.
@@ -22,3 +22,4 @@ To implement this pattern, we then need three object literals to represent each 
   * The order has a reference to a given customer and makes him pay using its "deliver" method.
   * The restaurant is a more complex object with a collection (array) of orders and an essential method ("prepareOrders") that start the delivery of each order.
 
+![Command (idiomatic)](Command.png)

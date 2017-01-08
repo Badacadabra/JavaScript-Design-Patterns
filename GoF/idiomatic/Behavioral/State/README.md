@@ -14,3 +14,5 @@ The State design pattern is obviously what we should use here. We need:
   * Object literals to represent available states (on/off)
 
 Contrary to the Strategy pattern, we can access the context directly from available states (our PC is used as a parameter of the main method of both states). This allows state changes from states themselves.
+
+![State (idiomatic)](State.png)

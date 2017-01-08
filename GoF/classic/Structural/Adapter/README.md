@@ -12,3 +12,5 @@ Adapter is a well-known solution in this kind of situation. We need:
     
   * Abstract representations (generally interfaces) of the problem. Here we easily see that a digital interface is not compatible with an analog one.
   * Concrete implementations of these abstractions: e.g. HDMIToVGAAdapter & VGA. Here the adapter should be able to delegate some work to the adapted entity.
+
+![Adapter (classic)](Adapter.png)

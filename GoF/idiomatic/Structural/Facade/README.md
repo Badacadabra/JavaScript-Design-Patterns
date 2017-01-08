@@ -14,3 +14,5 @@ Facade is often used to hide the underlying complexity of a system. To implement
   * Create a facade that has a reference to each animal
 
 Here the client will use the facade only, especially the main method that returns the favorite meal of each animal. No additional effort is required.
+
+![Facade (idiomatic)](Facade.png)

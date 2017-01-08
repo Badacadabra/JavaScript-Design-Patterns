@@ -13,3 +13,5 @@ We can use Flyweight here, which is actually tied to Factory. A Factory handles 
   * An abstract representation of a Linux distro (abstract class or interface)
   * Concrete implementations of this abstraction (Debian, RedHat, Slackware)
   * A "class" with a factory method which will be responsible for instantiation (contrary to a simple Factory method, some extra code is required to test if the wanted instance already exists or not)
+
+![Flyweight (classic)](Flyweight.png)

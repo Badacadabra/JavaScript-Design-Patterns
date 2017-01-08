@@ -16,3 +16,5 @@ The Observer design pattern helps a lot when we have to implement an event-drive
   * An object literal to represent the observable entity 
 
 The observable object (gazelle) maintains a list (array) of predators. Then, depending on its actions (determined by the client code), its "notifyPredators" method may be called. This method would iterate through the array of predators and make them attack.
+
+![Observer (idiomatic)](Observer.png)

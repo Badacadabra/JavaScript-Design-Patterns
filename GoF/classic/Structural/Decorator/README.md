@@ -17,4 +17,6 @@ To make this working, we need:
   * An abstract representation of a custom pizza (abstract class which is actually the abstract decorator)
   * Concrete decorators (ingredients) that will be used to add new flavors to a more basic pizza
 
+![Decorator (classic)](Decorator.png)
+
 N.B. JavaScript is a very flexible language. Whenever we need to build something step by step or add new functionalities dynamically to an object, we can do it more easily using the idiomatic mechanisms of JavaScript (which is not a class-based language). Class-style programming is a matter of taste here and may be useful when we need more encapsulation. However, the best solution is often the simplest one...

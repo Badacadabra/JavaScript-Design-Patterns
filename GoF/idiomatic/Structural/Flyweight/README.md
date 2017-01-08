@@ -9,3 +9,5 @@ Everytime we use an object literal, we create a new object in JavaScript. But if
 # Solution
 
 We can use Flyweight here, which is actually tied to Factory. A Factory handles flyweights when it reuses instances instead of constantly creating new ones. To do so, we generally use a Map or an object without prototype in the factory function. The first instance of a specific type created by the factory is always saved in this data structure and then reused in all subsequent calls.
+
+![Flyweight (idiomatic)](Flyweight.png)

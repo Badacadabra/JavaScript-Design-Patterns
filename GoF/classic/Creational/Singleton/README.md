@@ -19,3 +19,5 @@ Singleton is the key! To implement this pattern, we can:
   * Create a "class" with a private constructor
   * Create a static attribute that will contain the unique instance of our class
   * Create a static method that will check if the instance is unique and return it
+
+![Singleton (classic)](Singleton.png)

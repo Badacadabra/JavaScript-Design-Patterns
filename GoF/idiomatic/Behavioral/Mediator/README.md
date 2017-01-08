@@ -16,3 +16,5 @@ This is exactly the solution proposed by the Mediator pattern. To implement this
   * An object literal to represent Harry (who is the mediator)
 
 Tom and Dick have both a "send" and "receive" methods, but they do not communicate directly. They communicate through the mediator who acts a bit like a router. Thus, Harry must have a reference to both neighbor objects and, depending on the sender, he will know the receiver... 
+
+![Mediator (idiomatic)](Mediator.png)

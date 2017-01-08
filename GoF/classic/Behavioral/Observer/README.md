@@ -16,3 +16,5 @@ The Observer design pattern helps a lot when we have to implement an event-drive
   * An abstract representation of predators which are observers (abstract class or interface)
   * A concrete prey (Gazelle)
   * Concrete predators (Lion & Crocodile)
+
+![Observer (classic)](Observer.png)

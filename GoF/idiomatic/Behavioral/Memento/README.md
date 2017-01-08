@@ -14,3 +14,5 @@ Here we have to use bookmarks to save interesting webpages and the Memento patte
   * An object literal containing a collection (array) of bookmarks (this is the "caretaker")
 
 When the "saveCurrentPage" method is called, a new bookmark (memento) is created and this one can be stored by the bookmarks manager.
+
+![Memento (idiomatic)](Memento.png)

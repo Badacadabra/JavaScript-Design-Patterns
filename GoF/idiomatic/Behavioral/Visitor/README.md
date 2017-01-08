@@ -6,7 +6,7 @@ I love history and I would like to visit more old monuments. But these are treas
 
 If any individual can enter a historical monument and degrade it, we can say that the original structure is definitely lost. To preserve that structure, people should not be allowed to enter historical monuments without permission and supervision.
 
-Applied to JavaScript, we could say this is very easy to modify directly the structure of an object and we may be tempted to do so. *But this is not what we want...
+Applied to JavaScript, we could say this is very easy to modify directly the structure of an object and we may be tempted to do so. But this is not what we want...
 
 # Solution
 
@@ -18,3 +18,5 @@ To implement the Visitor design pattern, we can have:
   * An object literal to represent a tourist (visitor)
 
 Each monument has an "accept" method which takes a visitor object as parameter. The role of this method is to call the "visit" method of the visitor with a reference to the monument on which the "accept" method was called (using "this"). 
+
+![Visitor (idiomatic)](Visitor.png)

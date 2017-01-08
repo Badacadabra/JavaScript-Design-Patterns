@@ -27,3 +27,5 @@ In the clone method, we can:
   * Get the prototype of the original object separately with Object.getPrototypeOf()
   * Create a new object from this prototype with Object.create()
   * Merge the own properties of the original object with the inherited properties of the newly created object
+
+![Prototype (classic)](Prototype.png)

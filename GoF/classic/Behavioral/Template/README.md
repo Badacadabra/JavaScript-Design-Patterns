@@ -16,3 +16,5 @@ The Template design pattern is an ideal candidate to express with code this kind
   * Concrete constructions (House & Building)
 
 Most methods on the abstract class are abstract and are implemented in concrete constructions.
+
+![Template (classic)](Template.png)

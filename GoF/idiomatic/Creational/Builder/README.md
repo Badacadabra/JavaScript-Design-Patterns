@@ -16,4 +16,6 @@ The Builder pattern allows us to build our PC step by step with only three objec
 
 When the manufacturer will receive an order, it will ask its workforce to build the custom PC step by step through its "manufacture" method.
 
+![Builder (idiomatic)](Builder.png)
+
 N.B. Since we do not use constructor functions in the idiomatic style, this version of the Builder pattern is not a solution to the telescoping constructor problem. But you might be interested in the "Object Specifier" pattern...

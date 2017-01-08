@@ -14,3 +14,5 @@ The Strategy design pattern is exactly what we need in this kind of situation. T
   * A concrete context (FightingGame) which contains a reference to a strategy
   * An abstract representation of a strategy (abstract class or interface)
   * Concrete strategies (Offense & Defense)
+
+![Strategy (classic)](Strategy.png)

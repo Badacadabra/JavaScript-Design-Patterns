@@ -15,3 +15,5 @@ The State design pattern is obviously what we should use here. Here we need:
   * Concrete states (on/off)
 
 Contrary to the Strategy pattern, we can access the context directly from the concrete states. This allows state changes from states themselves.
+
+![State (classic)](State.png)

@@ -15,3 +15,5 @@ Everytime a request should be handled by multiple (and complementary) processing
   * An abstract representation of a racer (abstract class or interface)
   * Concrete racers (Walker, Runner, Swimmer)
   * Composition because each racer "class" must have a reference to the next relay (except for the last athlete who crosses the finish line)
+
+![Chain of Responsibility (classic)](ChainOfResponsibility.png)

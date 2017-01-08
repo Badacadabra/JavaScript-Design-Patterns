@@ -13,3 +13,5 @@ Facade is often used to hide the underlying complexity of a system. To implement
   * Create an abstract representation of an Animal (abstract class or interface)
   * Create concrete implementations of this abstraction (Dog & Rabbit)
   * Create a "class" that will make it easy to use the concrete implementations (HowToFeedAnimals)
+
+![Facade (classic)](Facade.png)

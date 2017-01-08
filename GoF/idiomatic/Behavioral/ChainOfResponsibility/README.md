@@ -18,4 +18,6 @@ Everytime a request should be handled by multiple (and complementary) processing
 
 Each of these objects should have at least their own method ("go") whose action will be specific to the associated sport. But each of these particular "go" methods will also transfer some work to the next relay, chosen by the client code.
 
+![Chain of Responsibility (idiomatic)](ChainOfResponsibility.png)
+
 N.B. This design pattern should not be confused with simple method chaining in JavaScript.

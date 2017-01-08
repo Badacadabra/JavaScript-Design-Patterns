@@ -14,4 +14,6 @@ The idea is to "augment" a basic product (such as a Margherita) with some extras
   * An object literal to represent a basic pizza (Margherita)
   * Two factory functions that take a (basic or already decorated) pizza as parameter and return a new decorated pizza (with bacon or peppers)
 
+![Decorator (idiomatic)](Decorator.png)
+
 N.B. In JavaScript, there are many ways to add new functionalities to an object. This implementation of the Decorator pattern is only one solution among an infinity of possibilities. Moreover, this pattern should not be confused with function decorators which are a bit different and serve another purpose.

@@ -13,3 +13,5 @@ Here we have to use bookmarks to save interesting webpages and the Memento patte
   * A concrete "originator" (the browser) which is responsible for the action
   * A concrete "memento" (a bookmark) which keeps the link to the interesting webpage
   * A concrete "caretaker" (the bookmarks manager) which keeps a list of bookmarks
+
+![Memento (classic)](Memento.png)

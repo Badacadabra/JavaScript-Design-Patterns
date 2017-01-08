@@ -11,3 +11,5 @@ Here a toy box is, to some extent, a toy in itself that can contain other toys. 
 A good idea is to consider a group of toys like a simple toy. So a toy box full of toys is just a toy after all!
 
 The Composite design pattern is useful in this kind of situation. To implement this one, we only need two factory functions. The first one will be responsible for the creation of simple toys (balls), whereas the second one will be responsible for the creation of composite toys (toy boxes). In the object returned by the more complex factory function, we should have at least a collection of toys (an array is fine) and a method that makes it possible to iterate through it. But since the collection can also contain another toy box (that contain itself a collection of toys), this method must be able to iterate deeper.
+
+![Composite (idiomatic)](Composite.png)

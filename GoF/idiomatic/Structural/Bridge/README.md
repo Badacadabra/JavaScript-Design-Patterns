@@ -16,3 +16,5 @@ The best solution is to use a "Bridge" between a simple recipe and a sauce. This
   * Object (literals) to describe available sauces
 
 In the client code, the instance of sauce passed to the recipe function will give us the final meal.
+
+![Bridge (idiomatic)](Bridge.png)

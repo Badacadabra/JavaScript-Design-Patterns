@@ -14,3 +14,5 @@ The Interpreter pattern is exactly what we need to tell JavaScript how to interp
   * A basic object literal to represent the context (the sonata)
 
 The distinction between terminal and nonterminal expressions in the Interpreter pattern is a bit like the distinction between simple and composed elements in the Composite pattern. A note is a terminal expression because it is an "elementary symbol" of the grammar. However, an arpeggio is a nonterminal expression because it can be considered as a group of notes.
+
+![Interpreter (idiomatic)](Interpreter.png)

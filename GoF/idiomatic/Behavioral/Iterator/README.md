@@ -16,3 +16,5 @@ Iterator is the design pattern we need for this. To implement this pattern, we c
   * A very basic object literal representing a library (which is a collection of books) 
 
 In this particular case, a collection is an iterable object whereas a catalog is an iterator object.
+
+![Iterator (idiomatic)](Iterator.png)

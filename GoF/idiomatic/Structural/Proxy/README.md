@@ -16,3 +16,5 @@ We could consider an ATM as a Proxy whose aim is to verify access to a bank acco
   * A more complex object (literal) to represent the ATM that we use as a proxy
 
 The bank account should be invisible from the outside of its module, contrary to the ATM that will have to handle cash withdrawal directly. The process is simple: we start with code verification, then the ATM delegates the operation to the real bank account if the code is correct. If it is not, an exception is thrown and the bank account cannot be reached. 
+
+![Proxy (idiomatic)](Proxy.png)

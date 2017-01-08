@@ -16,3 +16,5 @@ This is exactly the solution proposed by the Mediator pattern. To implement this
   * An abstract representation of a neighborhood mediator (abstract class or interface)
   * Concrete neighbors (Tom and Dick)
   * A concrete mediator (Harry)
+
+![Mediator (classic)](Mediator.png)

@@ -16,3 +16,5 @@ The Template design pattern is an ideal candidate to express with code this kind
   * A general function that can be used as a template
 
 Constructions expressed with object literals should have common methods like "foundations", "walls" or "roof" that symbolize key steps in every construction project. Then the template function can be used in the client code, passing it a construction as argument. This template function will create a house or a building by calling each method of the given construction in the right order.
+
+![Template (idiomatic)](Template.png)

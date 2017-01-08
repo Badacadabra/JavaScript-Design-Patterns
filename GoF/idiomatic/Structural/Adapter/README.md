@@ -14,3 +14,5 @@ Adapter is a well-known solution in this kind of situation. Here we need very fe
   * An object (literal) that represents the HDMI to VGA adapter
 
 The latter must have a reference to the first one and must be the entry point of the module. Then the main method of the adapter will delegate some work to the main method of the VGA connection.
+
+![Adapter (idiomatic)](Adapter.png)

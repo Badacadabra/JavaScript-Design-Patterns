@@ -16,3 +16,5 @@ Factory makes it possible to delegate the instantiation logic. To implement this
   * An abstract representation of a Linux distro (abstract class or interface)
   * Concrete implementations of this abstraction (Debian, RedHat, Slackware)
   * A "class" with a factory method which will be responsible for instantiation 
+
+![Factory (classic)](Factory.png)

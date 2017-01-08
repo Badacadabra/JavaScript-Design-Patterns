@@ -15,4 +15,6 @@ The Builder pattern allows us to build our PC step by step. This pattern require
   * A director (here a manufacturer, which will delegate the work to the geeks in the staff)
   * A product (PC), the entity to build
 
+![Builder (classic)](Builder.png)
+
 N.B. Building an object step by step is easy in JavaScript. It is in the language DNA (see object literals). In practice, the Builder design pattern is not really interesting in this language, at least in its "class" form. We could consider it when we need encapsulation, but most of the time, the "options object pattern" is a much better and convenient solution.

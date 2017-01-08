@@ -15,3 +15,5 @@ The Composite design pattern is useful in this kind of situation. To implement t
   * An abstract representation of a toy (abstract class or interface)
   * Concrete toys, especially a simple one (ball) and a complex one (toy box)
   * Methods for the complex toy to manage (simple and complex) toys inside of it
+
+![Composite (classic)](Composite.png)

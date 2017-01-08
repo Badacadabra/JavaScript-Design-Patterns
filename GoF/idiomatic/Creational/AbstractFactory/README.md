@@ -12,3 +12,5 @@ As a system administrator, you only want to know how to get an instance of a spe
 # Solution
 
 AbstractFactory is a great solution here. We could consider it as a superset of the Factory pattern, but there is significantly more work to do. Indeed, we need a factory function for each OS family and of course a factory of factories that will be the entry point of the associated module.
+
+![Abstract Factory (idiomatic)](AbstractFactory.png)

@@ -11,7 +11,7 @@ In computer science terms, it seems obvious that the restaurant has to handle a 
 # Solution
 
 The Command pattern is a great help here. In this pattern terminology, we will say that:
-  ***
+  
   * The restaurant is the "invoker" who creates and handles new orders internally
   * The order is the "command", in other words the request which comes from a client
   * The customer is the "receiver" of the order
@@ -22,3 +22,5 @@ To implement this pattern, we then need:
   * An abstract representation of an order (abstract class or interface)
   * A concrete order that we will call "TexMex" (this one must have a reference to the customer)
   * A concrete customer whose action (pay) will be triggered from the order itself
+
+![Command (classic)](Command.png)

@@ -16,3 +16,5 @@ Here we need to split the hierarchy of classes and prefer composition over inher
   * Concrete implementations of both abstractions
   
 Of course, methods defined in the main abstract class delegate operations to the methods of the other abstraction.
+
+![Bridge (classic)](Bridge.png)
