@@ -9,7 +9,7 @@ Person = do ->
             secretNickname = nickname
 
         sayHello: -> 
-            "Hello, #{this.firstName} #{this.lastName}!"
+            "Hello, #{@firstName} #{@lastName}!"
 
         getSecretNickname: -> 
             secretNickname

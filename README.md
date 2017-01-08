@@ -1,8 +1,8 @@
-# PatternifyJS: JavaScript Design Patterns
+# PatternifyJS - JavaScript Design Patterns
 
 ## About
 
-PatternifyJS is a reference of the main design patterns in the JavaScript world. External libraries are not covered, only the core languages are. Here is the list of all available languages:
+PatternifyJS is a reference of the main design patterns in JavaScript. JS libraries are not covered, but the core scripting languages around JavaScript are there. Here is the list of all available languages:
 
 * ECMAScript (Vanilla)
 	* ES5
@@ -12,9 +12,9 @@ PatternifyJS is a reference of the main design patterns in the JavaScript world.
 
 The Gang of Four (GoF) patterns are based on original synopses inspired from the real life and are available in two distinct flavors: "[classic](GoF/classic)" & "[idiomatic](GoF/idiomatic)".
 
-The classic style emulates the principles of traditional class-based object-oriented languages like Java. Therefore, this style makes heavy use of abstraction, interfaces, classes, inheritance, composition, encapsulation and polymorphism. As a prototype-based language, JavaScript does not have all these functionalities natively (despite all the syntactic sugar introduced by ES6). But it is still possible to use and reproduce each of these concepts... For obvious reasons, constructor functions are the rule in the classic style. Moreover, each design pattern has its own class diagram in UML.
+The classic style emulates the principles of traditional class-based object-oriented languages like Java. Therefore, this style makes heavy use of packages, abstraction, interfaces, classes, inheritance, composition, encapsulation and polymorphism. As a prototype-based language, JavaScript does not have all these functionalities natively (despite all the syntactic sugar introduced by ES6). But it is still possible to use and reproduce most of these concepts... For obvious reasons, constructor functions are the rule in the classic style and each design pattern of this category has its own UML class diagram.
 
-The idiomatic style reveals the true nature of JavaScript. Constructor functions and classes are replaced by factory functions and object literals, there is no abstraction anymore, encapsulation is reduced to the minimum and flexibility raised to the maximum. With this style, the GoF patterns are a bit difficult to recognize because their overall structure is blurred. But here it is more reasonable to think about objects directly, not about classes (see object diagrams in UML).
+The idiomatic style reveals the true nature of JavaScript. Constructor functions and classes are replaced by factory functions and object literals, there is no abstraction anymore, encapsulation is reduced to the minimum and flexibility raised to the maximum. With this style, the GoF patterns are a bit difficult to recognize because their overall structure is blurred. But here it is more reasonable to think about objects directly, not about classes. This is the reason why class diagrams have been replaced by UML object diagrams in the idiomatic style.
 
 Apart from the GoF patterns, there are also miscellaneous (functional and more) patterns in JavaScript that make life easier. They can be of a great help!
 
@@ -52,15 +52,17 @@ Apart from the GoF patterns, there are also miscellaneous (functional and more) 
 ## Miscellaneous patterns
 
 * [Currying](misc/Currying)
+* [Method Chaining](misc/MethodChaining)
 * [Module](misc/Module)
 * [Object Specifier](misc/ObjectSpecifier)
 * [Revealing Module](misc/RevealingModule)
 
 ## Inspiring resources
 
-* *JavaScript: The Definitive Guide*, **David Flanagan**
-* *JavaScript: The Good Parts*, **Douglas Crockford**
-* *Learning JavaScript Design Patterns*, **Addy Osmani**
-* *Exploring ES6*, **Axel Rauschmayer**
-* *The Little Book on CoffeeScript*, **Alex MacCaw**
-* *TypeScript Deep Dive*, **Basarat Ali Syed**
+* *JavaScript: The Definitive Guide* by **David Flanagan**
+* *JavaScript: The Good Parts* by **Douglas Crockford**
+* *Learning JavaScript Design Patterns* by **Addy Osmani**
+* *Exploring ES6* by **Axel Rauschmayer**
+* *The Little Book on CoffeeScript* by **Alex MacCaw**
+* *TypeScript Deep Dive* by **Basarat Ali Syed**
+* *Design Patterns: Elements of Reusable Object-Oriented Software* by **Erich Gamma**, **Richard Helm**, **Ralph Johnson** and **John Vlissides**
