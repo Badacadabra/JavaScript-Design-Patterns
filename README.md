@@ -66,3 +66,5 @@ Apart from the GoF patterns, there are also miscellaneous (functional and more) 
 * *The Little Book on CoffeeScript* by **Alex MacCaw**
 * *TypeScript Deep Dive* by **Basarat Ali Syed**
 * *Design Patterns: Elements of Reusable Object-Oriented Software* by **Erich Gamma**, **Richard Helm**, **Ralph Johnson** and **John Vlissides**
+
+Thank You.
